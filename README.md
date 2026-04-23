@@ -51,9 +51,10 @@ Nuestra arquitectura de gestión se divide en los siguientes espacios de trabajo
 | Nombre | Rol |
 | :--- | :--- |
 | **Alan Ventura** | Jefe de Proyecto / DBA |
+| **David Aldana** | Analista de Calidad (QA) / Tester |
 | **Luis Arroyo** | Desarrollador Frontend |
 | **Luis Machaca** | Analista de Requisitos / Arquitecto de WS |
 | **Matias Vincula** | Desarrollador Backend |
 | **Ricardo Matamoros** | Diseñador UI/UX |
-| **David Aldana** | Analista de Calidad (QA) / Tester |
+
 
