@@ -1,0 +1,12 @@
+SISTEMA GIE - BOCETO DE LÓGICA
+------------------------------
+Objetivo: Medir el nivel de satisfacción post-coaching.
+
+ALGORITMO_CALCULO_BIENESTAR:
+1. Recolectar datos de encuestas anónimas (escala 1-10).
+2. Si (Promedio_Satisfaccion < 7) Entonces:
+   - Generar alerta para el consultor senior.
+   - Proponer sesión de refuerzo.
+3. Sino:
+   - Archivar reporte mensual como "Satisfactorio".
+4. Fin.

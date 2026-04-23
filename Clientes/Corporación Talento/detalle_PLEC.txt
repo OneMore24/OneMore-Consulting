@@ -1,0 +1,10 @@
+SISTEMA PLEC - ESQUEMA DE RANKING
+---------------------------------
+Evaluación de perfiles profesionales.
+
+PSEUDOCÓDIGO_EVALUADOR:
+- Para cada (Candidato) en Lista_Postulantes:
+    - Sumar(Puntaje_Habilidad_Tecnica)
+    - Sumar(Puntaje_Prueba_Psicometrica)
+    - Si (Puntaje_Total > 85) Agregar a "Candidatos_Finalistas"
+- Generar Reporte PDF para el reclutador.

@@ -1,0 +1,12 @@
+SISTEMA VITALIS - ESTRUCTURA DE DATOS
+-------------------------------------
+Entidad Principal: HISTORIAL_CLINICO
+
+CAMPOS_REQUERIDOS:
+- ID_Paciente (Primary Key)
+- Fecha_Ultima_Atencion
+- Especialidad_Asignada
+- Estado (Estable / En Observación / Crítico)
+
+MÓDULO_TRIAGE:
+- Si (Saturacion_Oxigeno < 95) Entonces prioritizar atención en cola.

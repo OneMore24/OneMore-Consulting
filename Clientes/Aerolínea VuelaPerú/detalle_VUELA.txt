@@ -1,0 +1,9 @@
+SISTEMA VUELA_PERU - CONTROL OPERATIVO
+--------------------------------------
+Checklist de Seguridad de Vuelo.
+
+ALGORITMO_PRE_DESPEGUE:
+1. Verificar horas de vuelo de la aeronave.
+2. Si (Horas_Desde_Mantenimiento > 500) Bloquear aeronave para revisión.
+3. Verificar estado de salud de la tripulación asignada.
+4. Si (Checklist == OK) Emitir Hoja de Ruta.

@@ -1,0 +1,12 @@
+SISTEMA SNMP - MINI BOCETO
+--------------------------
+Funcionalidad: Detección de picos de estrés.
+
+PSEUDOCÓDIGO:
+- Mientras (Usuario_Activo) Hacer:
+    - Leer(Nivel_Frecuencia_Cardiaca)
+    - Si (Frecuencia > Umbral_Personalizado) Entonces:
+        - Ejecutar "Audio_Respiracion_Guiada.mp3"
+        - Registrar evento en Log de Crisis.
+    - FinSi
+- FinMientras

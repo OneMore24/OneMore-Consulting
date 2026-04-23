@@ -1,0 +1,10 @@
+SISTEMA SENTRA - LÓGICA DE TRAZABILIDAD
+---------------------------------------
+Control de Cadena de Frío.
+
+FUNCIÓN_CONTROL:
+1. Recibir temperatura del sensor del contenedor.
+2. Si (Temperatura > 4°C) Entonces:
+   - Marcar Lote como "Riesgo de Rechazo".
+   - Notificar a Logística inmediatamente.
+3. Registrar coordenadas GPS del envío.

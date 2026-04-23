@@ -1,0 +1,10 @@
+SISTEMA SADE - GESTIÓN DE STOCK
+-------------------------------
+Módulo: Reabastecimiento Automático.
+
+LÓGICA_INVENTARIO:
+- Buscar Articulo_ID en DB_Inventario.
+- Si (Stock_Actual < Stock_Minimo_Seguridad) Entonces:
+    - Crear Orden_de_Compra automática al Proveedor.
+    - Cambiar Estado a "Esperando Suministro".
+- Actualizar Saldo_Contable.
