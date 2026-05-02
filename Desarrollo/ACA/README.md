@@ -1,4 +1,4 @@
-# 🧠 APCA (App para el Control de Ansiedad)
+# 🧠 ACA (App para el Control de Ansiedad)
 
 **Cliente:** Clínica Anxiety
 **Estado Actual:** 🟡 En Planificación y Análisis de Requisitos

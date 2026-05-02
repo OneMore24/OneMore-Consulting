@@ -35,7 +35,7 @@ Nuestra arquitectura de gestión se divide en los siguientes espacios de trabajo
 
 | Cliente | Proyecto | Estado |
 | :--- | :--- | :--- |
-| **Clínica Anxiety** | ![APCA](https://img.shields.io/badge/APCA-PROYECTO_PRINCIPAL-FFD700?style=for-the-badge&logoColor=black) | 🟡 **Planificación** |
+| **Clínica Anxiety** | ![ACA](https://img.shields.io/badge/APCA-PROYECTO_PRINCIPAL-FFD700?style=for-the-badge&logoColor=black) | 🟡 **Planificación** |
 | Excelentemente | Proyecto GIE | 🟢 En Desarrollo |
 | Mente en Calma | Proyecto SNMP | ⚪ En Mantenimiento |
 | Clínica San Gabriel | Proyecto VITALIS | 🟢 En Desarrollo |
