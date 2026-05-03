@@ -11,4 +11,4 @@ El cliente requiere una herramienta digital que permita a sus pacientes registra
 
 ### 🚀 Enlace al Proyecto
 Toda la ingeniería, diseño y código fuente de esta solución se gestiona en la siguiente ruta:
-👉 [Ir a Desarrollo/APCA](../../Desarrollo/APCA)
+👉 [Ir a Desarrollo/ACA](../../Desarrollo/ACA)

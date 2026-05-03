@@ -35,13 +35,13 @@ Nuestra arquitectura de gestión se divide en los siguientes espacios de trabajo
 
 | Cliente | Proyecto | Estado |
 | :--- | :--- | :--- |
-| **Clínica Anxiety** | ![APCA](https://img.shields.io/badge/APCA-PROYECTO_PRINCIPAL-FFD700?style=for-the-badge&logoColor=black) | 🟡 **Planificación** |
+| **Clínica Anxiety** | ![ACA](https://img.shields.io/badge/ACA-PROYECTO_PRINCIPAL-FFD700?style=for-the-badge&logoColor=black) | 🟡 **Planificación** |
 | Excelentemente | Proyecto GIE | 🟢 En Desarrollo |
-| Mente en Calma | Proyecto SNMP | ⚪ Pendiente |
+| Mente en Calma | Proyecto SNMP | ⚪ En Mantenimiento |
 | Clínica San Gabriel | Proyecto VITALIS | 🟢 En Desarrollo |
-| Agroexportadora Verde | Proyecto SENTRA | ⚪ Pendiente |
+| Agroexportadora Verde | Proyecto SENTRA | ⚪ En Mantenimiento |
 | Corporación Talento | Proyecto PLEC | 🟢 En Desarrollo |
-| Grupo Andino Comercial | Proyecto SADE | ⚪ Pendiente |
+| Grupo Andino Comercial | Proyecto SADE | ⚪ En Mantenimiento |
 | Aerolíneas VuelaPerú | Proyecto VUELA_PERU | 🟢 En Desarrollo |
 
 ---
