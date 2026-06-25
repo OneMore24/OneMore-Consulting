@@ -6,6 +6,7 @@ import {
   SafeAreaView,
   StatusBar,
 } from 'react-native';
+import { useRouter } from 'expo-router';
 import { BackButton } from '../components/BackButton';
 import { SuggestionItem } from '../components/SuggestionItem';
 
@@ -42,6 +43,7 @@ const SUGGESTIONS = [
 ];
 
 export default function SugerenciasScreen() {
+  const router = useRouter();
   return (
     <SafeAreaView className="flex-1 bg-[#F2F5F2]">
       <StatusBar barStyle="dark-content" backgroundColor="#F2F5F2" />
@@ -70,7 +72,7 @@ export default function SugerenciasScreen() {
               subtitle={s.subtitle}
               duration={s.duration}
               image={s.image}
-              onPress={() => {}}
+              onPress={() => router.push('/actividades/respiracion-478' as any)}
             />
           ))}
 

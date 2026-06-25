@@ -90,7 +90,7 @@ export default function DetalleEjercicioScreen() {
             ))}
           </View>
 
-          <Button label="▷  Comenzar ahora" variant="primary" onPress={() => {}} />
+          <Button label="▷  Comenzar ahora" variant="primary" onPress={() => router.push('/actividades/respiracion-478' as any)} />
         </View>
       </ScrollView>
     </SafeAreaView>

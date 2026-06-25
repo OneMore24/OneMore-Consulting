@@ -3,6 +3,7 @@ import { View, ScrollView, SafeAreaView, StatusBar } from 'react-native';
 import { ScreenHeader } from '../../components/ScreenHeader';
 import { SettingsCard } from '../../components/SettingsCard';
 import { SettingsRow } from '../../components/SettingsRow';
+import { proximamente } from '../../utils/proximamente';
 
 export default function ConfiguracionScreen() {
   const [modoOscuro, setModoOscuro] = useState(false);
@@ -32,7 +33,7 @@ export default function ConfiguracionScreen() {
             />
             <SettingsRow
               label="Tamaño de texto"
-              onPress={() => {}}
+              onPress={() => proximamente()}
               isLast
             />
           </SettingsCard>
@@ -55,7 +56,7 @@ export default function ConfiguracionScreen() {
             />
             <SettingsRow
               label="Datos y almacenamiento"
-              onPress={() => {}}
+              onPress={() => proximamente()}
               isLast
             />
           </SettingsCard>
@@ -64,12 +65,12 @@ export default function ConfiguracionScreen() {
           <SettingsCard sectionLabel="Cuenta">
             <SettingsRow
               label="Idioma de la app"
-              onPress={() => {}}
+              onPress={() => proximamente()}
             />
             <SettingsRow
               label="Eliminar cuenta"
               danger
-              onPress={() => {}}
+              onPress={() => proximamente('La eliminación de cuenta estará disponible próximamente.')}
               isLast
             />
           </SettingsCard>

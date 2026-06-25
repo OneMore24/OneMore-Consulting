@@ -11,6 +11,7 @@ import { RecordatorioCard } from '../../components/RecordatorioCard';
 import { RecordatorioModal } from '../../components/RecordatorioModal';
 import { useRecordatorios } from '../../context/RecordatoriosContext';
 import { Recordatorio } from '../../utils/recordatoriosData';
+import { proximamente } from '../../utils/proximamente';
 
 const NOTIFICACIONES_CONFIG = [
   { key: 'cuestionario', label: 'Cuestionario diario', subtitle: 'Recordatorio para completar tu registro' },
@@ -80,11 +81,11 @@ export default function NotificacionesScreen() {
             <View className="p-4">
               <Text className="text-[#6B6B6B] text-sm mb-4">Sin notificaciones en este rango</Text>
               <View className="flex-row gap-x-3">
-                <TouchableOpacity className="flex-1 bg-[#F2F5F2] rounded-2xl py-4 items-center" activeOpacity={0.8}>
+                <TouchableOpacity className="flex-1 bg-[#F2F5F2] rounded-2xl py-4 items-center" activeOpacity={0.8} onPress={() => proximamente('El selector de horario estará disponible próximamente.')}>
                   <Text className="text-[#6B6B6B] text-xs uppercase tracking-widest mb-1">Desde</Text>
                   <Text className="text-[#1A1A1A] text-xl font-bold">22:00</Text>
                 </TouchableOpacity>
-                <TouchableOpacity className="flex-1 bg-[#F2F5F2] rounded-2xl py-4 items-center" activeOpacity={0.8}>
+                <TouchableOpacity className="flex-1 bg-[#F2F5F2] rounded-2xl py-4 items-center" activeOpacity={0.8} onPress={() => proximamente('El selector de horario estará disponible próximamente.')}>
                   <Text className="text-[#6B6B6B] text-xs uppercase tracking-widest mb-1">Hasta</Text>
                   <Text className="text-[#1A1A1A] text-xl font-bold">08:00</Text>
                 </TouchableOpacity>
