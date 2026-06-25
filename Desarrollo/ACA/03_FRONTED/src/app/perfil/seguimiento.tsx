@@ -1,24 +1,23 @@
 import React from 'react';
 import { View, Text, ScrollView, SafeAreaView, StatusBar, TouchableOpacity } from 'react-native';
+import { useRouter } from 'expo-router';
 import { ScreenHeader } from '../../components/ScreenHeader';
 import { StatCard } from '../../components/StatCard';
 import { MoodChart } from '../../components/MoodChart';
+import { useRegistros } from '../../context/RegistrosContext';
+import { calcularEstadisticas, datosSemana } from '../../utils/estadisticas';
 
-const HISTORIAL = [
-  { emoji: '😄', fecha: 'Hoy', estado: 'Muy bien', nivel: 5 },
-  { emoji: '😐', fecha: 'Ayer', estado: 'Bien', nivel: 4 },
-  { emoji: '😐', fecha: '19 mayo', estado: 'Regular', nivel: 3 },
-];
-
-const MOOD_DATA = [
-  { day: 'L', value: 3.5 },
-  { day: 'M', value: 4.0 },
-  { day: 'X', value: 3.8 },
-  { day: 'J', value: 4.2 },
-  { day: 'V', value: 4.5 },
-  { day: 'S', value: 4.8 },
-  { day: 'D', value: 4.3 },
-];
+function etiquetaFecha(fecha: Date): string {
+  const hoy = new Date();
+  const ayer = new Date();
+  ayer.setDate(hoy.getDate() - 1);
+  const f = new Date(fecha);
+  const esMismoDia = (a: Date, b: Date) =>
+    a.getFullYear() === b.getFullYear() && a.getMonth() === b.getMonth() && a.getDate() === b.getDate();
+  if (esMismoDia(f, hoy)) return 'Hoy';
+  if (esMismoDia(f, ayer)) return 'Ayer';
+  return f.toLocaleDateString('es-ES', { day: 'numeric', month: 'short' });
+}
 
 const MoodBars: React.FC<{ nivel: number; max?: number }> = ({ nivel, max = 5 }) => {
   return (
@@ -35,6 +34,17 @@ const MoodBars: React.FC<{ nivel: number; max?: number }> = ({ nivel, max = 5 })
 };
 
 export default function SeguimientoScreen() {
+  const router = useRouter();
+  const { registros } = useRegistros();
+  const stats = calcularEstadisticas(registros);
+  const MOOD_DATA = datosSemana(registros);
+  const HISTORIAL = registros.slice(0, 5).map((r) => ({
+    emoji: r.estadoEmocional?.emoji ?? '😐',
+    fecha: etiquetaFecha(r.fecha),
+    estado: r.estadoEmocional?.label ?? '',
+    nivel: r.estadoEmocional?.valor ?? 0,
+  }));
+
   return (
     <SafeAreaView className="flex-1 bg-[#F2F5F2]">
       <StatusBar barStyle="dark-content" backgroundColor="#F2F5F2" />
@@ -49,9 +59,9 @@ export default function SeguimientoScreen() {
 
           {/* ── Stats ── */}
           <View className="flex-row gap-x-3 mb-4">
-            <StatCard value="5🔥" label="Racha" />
-            <StatCard value="23" label="Entradas" />
-            <StatCard value="4.2" label="Promedio" />
+            <StatCard value={`${stats.racha}🔥`} label="Racha" />
+            <StatCard value={String(stats.entradas)} label="Entradas" />
+            <StatCard value={stats.promedioTexto} label="Promedio" />
           </View>
 
           {/* ── Gráfica semanal ── */}
@@ -90,6 +100,7 @@ export default function SeguimientoScreen() {
           <TouchableOpacity
             className="rounded-2xl py-4 items-center border border-[#2D5A4E]"
             activeOpacity={0.8}
+            onPress={() => router.push('/resumen-semanal' as any)}
           >
             <Text className="text-[#2D5A4E] font-semibold text-sm">Ver gráfica completa</Text>
           </TouchableOpacity>

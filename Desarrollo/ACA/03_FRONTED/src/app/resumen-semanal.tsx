@@ -10,18 +10,15 @@ import { BackButton } from '../components/BackButton';
 import { StatCard } from '../components/StatCard';
 import { MoodChart } from '../components/MoodChart';
 import { DayBar } from '../components/DayBar';
-
-const MOOD_DATA = [
-  { day: 'L', value: 3.5 },
-  { day: 'M', value: 4.2 },
-  { day: 'X', value: 3.8 },
-  { day: 'J', value: 4.5 },
-  { day: 'V', value: 4.0 },
-  { day: 'S', value: 4.8 },
-  { day: 'D', value: 4.3 },
-];
+import { useRegistros } from '../context/RegistrosContext';
+import { calcularEstadisticas, datosSemana, diasCompletadosSemana } from '../utils/estadisticas';
 
 export default function ResumenSemanalScreen() {
+  const { registros } = useRegistros();
+  const stats = calcularEstadisticas(registros);
+  const MOOD_DATA = datosSemana(registros);
+  const completados = diasCompletadosSemana(registros);
+
   return (
     <SafeAreaView className="flex-1 bg-[#F2F5F2]">
       <StatusBar barStyle="dark-content" backgroundColor="#F2F5F2" />
@@ -44,9 +41,9 @@ export default function ResumenSemanalScreen() {
 
           {/* ── Stats ── */}
           <View className="flex-row gap-x-3 mb-4">
-            <StatCard value="4.3" label="Promedio" />
-            <StatCard value="5 días 🔥" label="Racha" />
-            <StatCard value="7/7" label="Completado" />
+            <StatCard value={stats.promedioTexto} label="Promedio" />
+            <StatCard value={`${stats.racha} días 🔥`} label="Racha" />
+            <StatCard value={`${completados}/7`} label="Completado" />
           </View>
 
           {/* ── Gráfica de estado de ánimo ── */}

@@ -12,6 +12,9 @@ import { SuggestionItem } from '../components/SuggestionItem';
 import { BottomNavBar } from '../components/BottomNavBar';
 import { SOSButton } from '../components/SOSButton';
 import { SOSModal } from '../components/SOSModal';
+import { useAuth } from '../context/AuthContext';
+import { useRegistros } from '../context/RegistrosContext';
+import { calcularEstadisticas } from '../utils/estadisticas';
 
 const SUGGESTIONS = [
   {
@@ -30,7 +33,12 @@ const SUGGESTIONS = [
 
 export default function HomeScreen() {
   const router = useRouter();
+  const { usuario } = useAuth();
+  const { registros } = useRegistros();
+  const stats = calcularEstadisticas(registros);
   const [sosVisible, setSosVisible] = useState(false);
+
+  const primerNombre = usuario?.nombre?.trim().split(' ')[0] ?? '';
 
   const today = new Date();
   const dayName = today.toLocaleDateString('es-ES', { weekday: 'long' });
@@ -53,7 +61,9 @@ export default function HomeScreen() {
             <View className="flex-row justify-between items-start mb-4">
               <View>
                 <Text className="text-[#6B6B6B] text-xs mb-0.5">{dateFormatted}</Text>
-                <Text className="text-[#1A1A1A] text-2xl font-bold">Hola, Ana 👋</Text>
+                <Text className="text-[#1A1A1A] text-2xl font-bold">
+                  {primerNombre ? `Hola, ${primerNombre} 👋` : 'Hola 👋'}
+                </Text>
               </View>
               <View className="flex-row gap-x-2">
                 <TouchableOpacity
@@ -86,9 +96,9 @@ export default function HomeScreen() {
               onVerTodo={() => router.push('/resumen-semanal' as any)}
             />
             <WeeklySummaryCard
-              dias={5}
-              promedio="4.2"
-              entradas={12}
+              dias={stats.racha}
+              promedio={stats.promedioTexto}
+              entradas={stats.entradas}
               onPress={() => router.push('/resumen-semanal' as any)}
             />
 

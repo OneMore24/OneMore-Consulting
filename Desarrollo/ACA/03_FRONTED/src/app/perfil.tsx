@@ -11,6 +11,9 @@ import { Ionicons } from '@expo/vector-icons';
 import { BottomNavBar } from '../components/BottomNavBar';
 import { SettingsCard } from '../components/SettingsCard';
 import { SettingsRow } from '../components/SettingsRow';
+import { useAuth } from '../context/AuthContext';
+import { useRegistros } from '../context/RegistrosContext';
+import { calcularEstadisticas } from '../utils/estadisticas';
 
 const MENU_ITEMS = [
   { icon: 'person-outline', label: 'Editar Información', route: '/perfil/editar-info' },
@@ -23,6 +26,9 @@ const MENU_ITEMS = [
 
 export default function PerfilScreen() {
   const router = useRouter();
+  const { usuario } = useAuth();
+  const { registros } = useRegistros();
+  const stats = calcularEstadisticas(registros);
 
   return (
     <SafeAreaView className="flex-1 bg-[#F2F5F2]">
@@ -45,11 +51,11 @@ export default function PerfilScreen() {
                 <Ionicons name="person-outline" size={32} color="white" />
               </View>
               <View>
-                <Text className="text-white text-xl font-bold">Ana García</Text>
-                <Text className="text-white/70 text-sm">ana@correo.com</Text>
+                <Text className="text-white text-xl font-bold">{usuario?.nombre ?? 'Invitado'}</Text>
+                <Text className="text-white/70 text-sm">{usuario?.correo ?? 'Inicia sesión'}</Text>
                 <View className="flex-row items-center gap-x-1 mt-1">
                   <Text className="text-sm">⭐</Text>
-                  <Text className="text-white/70 text-xs">Miembro desde enero 2026</Text>
+                  <Text className="text-white/70 text-xs">Paciente de Clínica Anxiety</Text>
                 </View>
               </View>
             </View>
@@ -57,9 +63,9 @@ export default function PerfilScreen() {
             {/* Stats */}
             <View className="flex-row gap-x-3">
               {[
-                { value: '23', label: 'ENTRADAS' },
-                { value: '5🔥', label: 'RACHA' },
-                { value: '4.2', label: 'PROMEDIO' },
+                { value: String(stats.entradas), label: 'ENTRADAS' },
+                { value: `${stats.racha}🔥`, label: 'RACHA' },
+                { value: stats.promedioTexto, label: 'PROMEDIO' },
               ].map((stat) => (
                 <View
                   key={stat.label}

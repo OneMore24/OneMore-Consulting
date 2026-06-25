@@ -14,15 +14,36 @@ import { InputField } from '../../components/InputField';
 import { Button } from '../../components/Button';
 import { FormCard } from '../../components/FormCard';
 import { proximamente } from '../../utils/proximamente';
+import { useAuth } from '../../context/AuthContext';
+import { userApi } from '../../services/api';
 
 export default function EditarInfoScreen() {
-  const [nombre, setNombre] = useState('Ana');
-  const [apellido, setApellido] = useState('García');
-  const [email, setEmail] = useState('ana@correo.com');
-  const [fechaNacimiento, setFechaNacimiento] = useState('15/03/1995');
+  const router = useRouter();
+  const { usuario } = useAuth();
+  const partes = (usuario?.nombre ?? '').trim().split(' ');
+  const [nombre, setNombre] = useState(partes[0] ?? '');
+  const [apellido, setApellido] = useState(partes.slice(1).join(' '));
+  const [email, setEmail] = useState(usuario?.correo ?? '');
+  const [fechaNacimiento, setFechaNacimiento] = useState('');
   const [genero, setGenero] = useState('');
   const [biografia, setBiografia] = useState('');
-  const router = useRouter();
+  const [guardando, setGuardando] = useState(false);
+
+  const handleGuardar = async () => {
+    setGuardando(true);
+    try {
+      await userApi.updateProfile({
+        nombre_completo: `${nombre} ${apellido}`.trim(),
+        genero: genero || undefined,
+      });
+      proximamente('Cambios guardados correctamente.');
+      router.back();
+    } catch (e: any) {
+      proximamente(e?.message || 'No se pudieron guardar los cambios.');
+    } finally {
+      setGuardando(false);
+    }
+  };
 
   return (
     <SafeAreaView className="flex-1 bg-[#F2F5F2]">
@@ -119,7 +140,7 @@ export default function EditarInfoScreen() {
               multiline
               numberOfLines={3}
             />
-            <Button label="Guardar cambios" variant="primary" onPress={() => router.back()} />
+            <Button label="Guardar cambios" variant="primary" loading={guardando} onPress={handleGuardar} />
           </FormCard>
         </View>
       </ScrollView>
