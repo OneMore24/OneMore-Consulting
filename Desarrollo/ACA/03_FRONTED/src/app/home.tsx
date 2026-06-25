@@ -59,6 +59,7 @@ export default function HomeScreen() {
                 <TouchableOpacity
                   className="w-10 h-10 rounded-full bg-white items-center justify-center"
                   style={{ shadowColor: '#000', shadowOffset: { width: 0, height: 2 }, shadowOpacity: 0.05, shadowRadius: 8, elevation: 2 }}
+                  onPress={() => router.push('/perfil/notificaciones' as any)}
                 >
                   <Ionicons name="notifications-outline" size={20} color="#1A1A1A" />
                 </TouchableOpacity>
@@ -72,12 +73,12 @@ export default function HomeScreen() {
               </View>
             </View>
 
-            <MoodSelector />
+            <MoodSelector onSelect={() => router.push('/diario/cuestionario' as any)} />
 
             <View className="flex-row gap-x-3 mb-6">
-              <QuickActionButton icon="clipboard-outline" label="Cuestionario" />
-              <QuickActionButton icon="leaf-outline" label="Respiración" />
-              <QuickActionButton icon="book-outline" label="Diario" iconColor="#7B68EE" />
+              <QuickActionButton icon="clipboard-outline" label="Cuestionario" onPress={() => router.push('/diario/cuestionario' as any)} />
+              <QuickActionButton icon="leaf-outline" label="Respiración" onPress={() => router.push('/actividades/respiracion-478' as any)} />
+              <QuickActionButton icon="book-outline" label="Diario" iconColor="#7B68EE" onPress={() => router.push('/diario' as any)} />
             </View>
 
             <SectionHeader
@@ -101,7 +102,7 @@ export default function HomeScreen() {
                 title={s.title}
                 duration={s.duration}
                 image={s.image}
-                onPress={() => {}}
+                onPress={() => router.push('/actividades/respiracion-478' as any)}
               />
             ))}
 

@@ -102,7 +102,7 @@ export default function YogaRestaurativoScreen() {
           <Button
             label="▷  Comenzar ahora"
             variant="primary"
-            onPress={() => {}}
+            onPress={() => router.push('/actividades/respiracion-478' as any)}
           />
         </View>
       </ScrollView>

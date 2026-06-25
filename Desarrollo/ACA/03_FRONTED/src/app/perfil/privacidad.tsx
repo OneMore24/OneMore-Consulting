@@ -1,10 +1,13 @@
 import React, { useState } from 'react';
 import { View, ScrollView, SafeAreaView, StatusBar, TouchableOpacity, Text } from 'react-native';
+import { useRouter } from 'expo-router';
 import { ScreenHeader } from '../../components/ScreenHeader';
 import { SettingsCard } from '../../components/SettingsCard';
 import { SettingsRow } from '../../components/SettingsRow';
+import { proximamente } from '../../utils/proximamente';
 
 export default function PrivacidadScreen() {
+  const router = useRouter();
   const [perfilPublico, setPerfilPublico] = useState(false);
   const [compartirProgreso, setCompartirProgreso] = useState(false);
   const [analisisUso, setAnalisisUso] = useState(true);
@@ -52,9 +55,9 @@ export default function PrivacidadScreen() {
 
           {/* ── Seguridad ── */}
           <SettingsCard sectionLabel="Seguridad">
-            <SettingsRow label="Cambiar contraseña" onPress={() => {}} />
-            <SettingsRow label="Autenticación en 2 pasos" onPress={() => {}} />
-            <SettingsRow label="Sesiones activas" onPress={() => {}} isLast />
+            <SettingsRow label="Cambiar contraseña" onPress={() => router.push('/forgot-password' as any)} />
+            <SettingsRow label="Autenticación en 2 pasos" onPress={() => proximamente()} />
+            <SettingsRow label="Sesiones activas" onPress={() => proximamente()} isLast />
           </SettingsCard>
 
           {/* ── Exportar datos ── */}
@@ -62,6 +65,7 @@ export default function PrivacidadScreen() {
             className="rounded-2xl py-4 items-center border border-[#E53E3E]"
             style={{ backgroundColor: '#FFF5F5' }}
             activeOpacity={0.8}
+            onPress={() => proximamente('La exportación de tus datos estará disponible próximamente.')}
           >
             <Text className="text-[#E53E3E] font-semibold text-sm">Exportar mis datos</Text>
           </TouchableOpacity>

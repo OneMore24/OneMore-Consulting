@@ -8,6 +8,7 @@ import { ScreenHeader } from '../../components/ScreenHeader';
 import { SettingsCard } from '../../components/SettingsCard';
 import { SettingsRow } from '../../components/SettingsRow';
 import { Button } from '../../components/Button';
+import { proximamente } from '../../utils/proximamente';
 
 const FAQS = [
   '¿Cómo funciona el cuestionario diario?',
@@ -52,7 +53,7 @@ export default function AyudaScreen() {
               <SettingsRow
                 key={index}
                 label={faq}
-                onPress={() => {}}
+                onPress={() => proximamente('Pronto encontrarás aquí la respuesta a esta pregunta.')}
                 isLast={index === FAQS.length - 1}
               />
             ))}
@@ -78,7 +79,14 @@ export default function AyudaScreen() {
               <Button
                 label="  Enviar mensaje"
                 variant="primary"
-                onPress={() => {}}
+                onPress={() => {
+                  if (!mensaje.trim()) {
+                    proximamente('Escribe tu consulta antes de enviarla.');
+                    return;
+                  }
+                  setMensaje('');
+                  proximamente('¡Mensaje enviado! Te responderemos pronto.');
+                }}
               />
             </View>
           </SettingsCard>

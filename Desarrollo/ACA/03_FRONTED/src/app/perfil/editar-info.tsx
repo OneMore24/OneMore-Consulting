@@ -13,6 +13,7 @@ import { ScreenHeader } from '../../components/ScreenHeader';
 import { InputField } from '../../components/InputField';
 import { Button } from '../../components/Button';
 import { FormCard } from '../../components/FormCard';
+import { proximamente } from '../../utils/proximamente';
 
 export default function EditarInfoScreen() {
   const [nombre, setNombre] = useState('Ana');
@@ -38,7 +39,7 @@ export default function EditarInfoScreen() {
 
           {/* ── Avatar ── */}
           <View className="items-center mb-6">
-            <TouchableOpacity activeOpacity={0.8}>
+            <TouchableOpacity activeOpacity={0.8} onPress={() => proximamente('El cambio de foto de perfil estará disponible próximamente.')}>
               <View
                 className="w-20 h-20 rounded-2xl items-center justify-center mb-2"
                 style={{
