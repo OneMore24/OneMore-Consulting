@@ -21,12 +21,13 @@ Nuestra arquitectura de gestión se divide en los siguientes espacios de trabajo
 ---
 
 ## 🛠️ Stack Tecnológico
-> *Nota: Nuestro stack tecnológico se encuentra actualmente en un **proceso de evaluación y definición estratégica**. El equipo está analizando los requerimientos arquitectónicos para seleccionar las herramientas definitivas que garanticen el mejor rendimiento.*
+> *Nota: El stack varía según las necesidades de cada cliente. El detalle por proyecto se encuentra en su respectivo `README`. A continuación, el stack del proyecto principal **ACA**.*
 
-| Categoría | Tecnologías (En Evaluación) |
+| Categoría | Tecnología (Proyecto ACA) |
 | :--- | :--- |
-| **Lenguaje Base** | ![C++](https://img.shields.io/badge/C++-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white) |
-| **Base de Datos** | ![SQL](https://img.shields.io/badge/SQL-4479A1?style=for-the-badge&logo=postgresql&logoColor=white) |
+| **App móvil (Android)** | ![React Native](https://img.shields.io/badge/React_Native-20232A?style=for-the-badge&logo=react&logoColor=61DAFB) ![Expo](https://img.shields.io/badge/Expo-000020?style=for-the-badge&logo=expo&logoColor=white) |
+| **Backend / API REST** | ![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white) ![Express](https://img.shields.io/badge/Express-000000?style=for-the-badge&logo=express&logoColor=white) |
+| **Base de Datos** | ![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white) |
 | **Metodología** | ![Agil / Tradicional](https://img.shields.io/badge/ÁGIL_/_TRADICIONAL-333333?style=for-the-badge) |
 
 ---
@@ -35,7 +36,7 @@ Nuestra arquitectura de gestión se divide en los siguientes espacios de trabajo
 
 | Cliente | Proyecto | Estado |
 | :--- | :--- | :--- |
-| **Clínica Anxiety** | ![ACA](https://img.shields.io/badge/ACA-PROYECTO_PRINCIPAL-FFD700?style=for-the-badge&logoColor=black) | 🟡 **Planificación** |
+| **Clínica Anxiety** | ![ACA](https://img.shields.io/badge/ACA-PROYECTO_PRINCIPAL-FFD700?style=for-the-badge&logoColor=black) | 🟢 **En Desarrollo** (Front + Back + BD) |
 | Excelentemente | Proyecto GIE | 🟢 En Desarrollo |
 | Mente en Calma | Proyecto SNMP | ⚪ En Mantenimiento |
 | Clínica San Gabriel | Proyecto VITALIS | 🟢 En Desarrollo |
