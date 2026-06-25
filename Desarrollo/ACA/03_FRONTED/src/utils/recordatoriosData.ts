@@ -10,6 +10,8 @@ export interface Recordatorio {
   dias: DiaSemana[];
   activo: boolean;
   emoji: string;
+  /** id de la fila en el backend (si el recordatorio se persistió). */
+  backendId?: number;
 }
 
 export const DIAS_SEMANA: DiaSemana[] = ['L', 'M', 'X', 'J', 'V', 'S', 'D'];

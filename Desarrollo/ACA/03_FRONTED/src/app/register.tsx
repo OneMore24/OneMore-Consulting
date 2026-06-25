@@ -10,15 +10,18 @@ import { InputField } from '../components/InputField';
 import { BackButton } from '../components/BackButton';
 import { Checkbox } from '../components/Checkbox';
 import { FormCard } from '../components/FormCard';
+import { useAuth } from '../context/AuthContext';
 
 export default function RegisterScreen() {
   const router = useRouter();
+  const { register } = useAuth();
   const [fullName, setFullName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
   const [acceptedTerms, setAcceptedTerms] = useState(false);
   const [errors, setErrors] = useState<Record<string, string>>({});
+  const [loading, setLoading] = useState(false);
 
   const validate = () => {
     const e: Record<string, string> = {};
@@ -31,6 +34,19 @@ export default function RegisterScreen() {
     if (!acceptedTerms) e.terms = 'Debes aceptar los términos';
     setErrors(e);
     return Object.keys(e).length === 0;
+  };
+
+  const handleRegister = async () => {
+    if (!validate()) return;
+    setLoading(true);
+    try {
+      await register(fullName.trim(), email, password);
+      router.replace('/home' as any);
+    } catch (err: any) {
+      setErrors({ general: err?.message || 'No se pudo crear la cuenta' });
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -67,7 +83,10 @@ export default function RegisterScreen() {
                 />
                 {errors.terms ? <Text className="text-red-500 text-xs mt-1 ml-9">{errors.terms}</Text> : null}
               </View>
-              <Button label="Crear cuenta" variant="primary" onPress={() => { if (validate()) {} }} />
+              {errors.general ? (
+                <Text className="text-red-500 text-sm text-center mb-3">{errors.general}</Text>
+              ) : null}
+              <Button label="Crear cuenta" variant="primary" loading={loading} onPress={handleRegister} />
             </FormCard>
             <View className="flex-row justify-center items-center mt-6">
               <Text className="text-[#6B6B6B] text-sm">¿Ya tienes cuenta? </Text>
