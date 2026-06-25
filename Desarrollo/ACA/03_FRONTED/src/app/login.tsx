@@ -9,12 +9,15 @@ import { Button } from '../components/Button';
 import { InputField } from '../components/InputField';
 import { BackButton } from '../components/BackButton';
 import { FormCard } from '../components/FormCard';
+import { useAuth } from '../context/AuthContext';
 
 export default function LoginScreen() {
   const router = useRouter();
+  const { login } = useAuth();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [errors, setErrors] = useState<{ email?: string; password?: string }>({});
+  const [errors, setErrors] = useState<{ email?: string; password?: string; general?: string }>({});
+  const [loading, setLoading] = useState(false);
 
   const validate = () => {
     const e: typeof errors = {};
@@ -23,6 +26,19 @@ export default function LoginScreen() {
     if (!password) e.password = 'La contraseña es requerida';
     setErrors(e);
     return Object.keys(e).length === 0;
+  };
+
+  const handleLogin = async () => {
+    if (!validate()) return;
+    setLoading(true);
+    try {
+      await login(email, password);
+      router.replace('/home' as any);
+    } catch (err: any) {
+      setErrors({ general: err?.message || 'No se pudo iniciar sesión' });
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -55,10 +71,13 @@ export default function LoginScreen() {
                 onChangeText={setPassword}
                 error={errors.password}
               />
-              <TouchableOpacity className="self-end mb-5">
+              <TouchableOpacity className="self-end mb-5" onPress={() => router.push('/forgot-password' as any)}>
                 <Text className="text-[#4A4A4A] text-sm">¿Olvidaste tu contraseña?</Text>
               </TouchableOpacity>
-              <Button label="Iniciar Sesión" variant="primary" onPress={() => { if (validate()) {router.replace('/home' as any);} }} />
+              {errors.general ? (
+                <Text className="text-red-500 text-sm text-center mb-3">{errors.general}</Text>
+              ) : null}
+              <Button label="Iniciar Sesión" variant="primary" loading={loading} onPress={handleLogin} />
             </FormCard>
             <View className="flex-row justify-center items-center mt-6">
               <Text className="text-[#6B6B6B] text-sm">¿No tienes cuenta? </Text>

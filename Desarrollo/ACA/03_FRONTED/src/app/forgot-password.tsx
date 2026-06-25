@@ -8,9 +8,11 @@ import { BackButton } from '../components/BackButton';
 import { InputField } from '../components/InputField';
 import { Button } from '../components/Button';
 import { FormCard } from '../components/FormCard';
+import { useAuth } from '../context/AuthContext';
 
 export default function ForgotPasswordScreen() {
   const router = useRouter();
+  const { forgotPassword } = useAuth();
   const [email, setEmail] = useState('');
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
@@ -25,11 +27,14 @@ export default function ForgotPasswordScreen() {
   const handleSubmit = async () => {
     if (!validate()) return;
     setLoading(true);
-    // Simula llamada a API
-    setTimeout(() => {
-      setLoading(false);
+    try {
+      await forgotPassword(email);
       router.push('/verify-code' as any);
-    }, 1000);
+    } catch (err: any) {
+      setError(err?.message || 'No se pudo procesar la solicitud');
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (

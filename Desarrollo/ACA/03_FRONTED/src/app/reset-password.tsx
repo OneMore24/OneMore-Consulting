@@ -8,9 +8,11 @@ import { BackButton } from '../components/BackButton';
 import { InputField } from '../components/InputField';
 import { Button } from '../components/Button';
 import { FormCard } from '../components/FormCard';
+import { useAuth } from '../context/AuthContext';
 
 export default function ResetPasswordScreen() {
   const router = useRouter();
+  const { resetPassword } = useAuth();
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
   const [errors, setErrors] = useState<Record<string, string>>({});
@@ -26,13 +28,17 @@ export default function ResetPasswordScreen() {
     return Object.keys(e).length === 0;
   };
 
-  const handleSubmit = () => {
+  const handleSubmit = async () => {
     if (!validate()) return;
     setLoading(true);
-    setTimeout(() => {
-      setLoading(false);
+    try {
+      await resetPassword(password);
       router.push('/password-success' as any);
-    }, 1000);
+    } catch (err: any) {
+      setErrors({ general: err?.message || 'No se pudo actualizar la contraseña' });
+    } finally {
+      setLoading(false);
+    }
   };
 
   // Indicador de fortaleza
@@ -110,6 +116,9 @@ export default function ResetPasswordScreen() {
                 error={errors.confirmPassword}
               />
 
+              {errors.general ? (
+                <Text className="text-red-500 text-sm text-center mb-3">{errors.general}</Text>
+              ) : null}
               <Button
                 label="Guardar contraseña"
                 variant="primary"

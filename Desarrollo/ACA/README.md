@@ -1,21 +1,34 @@
-# 🧠 ACA (App para el Control de Ansiedad)
+# 🧠 ACA (App para el Control de la Ansiedad)
 
 **Cliente:** Clínica Anxiety
-**Estado Actual:** 🟡 En Planificación y Análisis de Requisitos
+**Estado Actual:** 🟢 En Desarrollo — Frontend, Backend y Base de Datos integrados
 
 ### 📌 Descripción del Producto
-**APCA** es una aplicación de software diseñada para el monitoreo y contención de crisis de ansiedad. Actúa como un puente entre el paciente y el terapeuta, proporcionando herramientas de autogestión y trazabilidad clínica.
+**ACA** es una aplicación móvil (Android) diseñada para el monitoreo y la contención de crisis de ansiedad del **paciente**, proporcionando herramientas de autogestión y trazabilidad de su bienestar emocional (Casos de Uso CU01–CU06).
 
-### 📋 Requisitos Fundamentales (Borrador Inicial)
-1. **Registro de Usuarios:** Gestión de roles (Paciente y Terapeuta).
-2. **Bitácora Diaria:** Formulario para registrar el estado de ánimo y factores desencadenantes.
-3. **Modo Crisis (Botón de Pánico):** Interfaz de acceso rápido con ejercicios de respiración y contacto de emergencia.
-4. **Dashboard Clínico:** Panel para que el terapeuta visualice gráficos de progreso y alertas tempranas.
+### 📋 Requisitos Fundamentales
+1. **Registro y acceso del paciente:** alta de cuenta, login y recuperación de contraseña.
+2. **Diario emocional:** registro del estado de ánimo y notas, con historial y tendencias.
+3. **Registro de síntomas físicos:** bitácora de crisis y su sintomatología.
+4. **Modo SOS:** acceso rápido a ejercicios de respiración y contactos de emergencia.
+5. **Biblioteca de recursos y recordatorios:** material de apoyo y recordatorios configurables.
 
-### 💻 Stack Tecnológico Propuesto
-* **Core / Lógica de Negocio:** C++ 
-* **Base de Datos:** SQL (Estructuración y trazabilidad de datos médicos)
-* **Arquitectura:** Cliente-Servidor
+> El alcance de esta versión cubre las funcionalidades del **paciente** (CU01–CU06 del cronograma). Un panel para el terapeuta queda como evolución futura, fuera de la línea base actual.
 
----
-> *Nota: Este documento es un borrador inicial y será expandido con diagramas de casos de uso, diccionarios de datos y requerimientos no funcionales en las próximas fases del desarrollo.*
+### 💻 Stack Tecnológico (real)
+* **App móvil:** React Native + Expo (TypeScript) — `03_FRONTED/`
+* **Backend / API REST:** Node.js + Express — `04_BACKEND/`
+* **Base de Datos:** MySQL (esquema en `04_BACKEND/database/ACA-DB.sql`, según `ACA-DER.pdf`)
+* **Seguridad:** contraseñas con hash bcrypt y sesión por JWT
+* **Arquitectura:** Cliente (app) ↔ Servidor (API REST) ↔ Base de Datos
+
+### 📂 Estructura
+| Carpeta | Contenido |
+| :--- | :--- |
+| `01_GESTION/` | Gestión del proyecto (cronograma, actas, project charter) |
+| `02_REQUISITOS/` | Requisitos, casos de uso, DER, prototipos, plan de pruebas |
+| `03_FRONTED/` | App móvil (React Native + Expo) |
+| `04_BACKEND/` | API REST (Node/Express) + esquema MySQL |
+| `05_QA_PRUEBAS/` | Reportes de pruebas |
+
+> *Para levantar el proyecto, ver los `README.md` de `03_FRONTED/` y `04_BACKEND/`.*

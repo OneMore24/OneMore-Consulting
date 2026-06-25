@@ -4,9 +4,16 @@ import {
 } from 'react-native';
 import { useRouter } from 'expo-router';
 import { Ionicons } from '@expo/vector-icons';
+import { useAuth } from '../../context/AuthContext';
 
 export default function CerrarSesionScreen() {
   const router = useRouter();
+  const { logout } = useAuth();
+
+  const handleLogout = () => {
+    logout();
+    router.replace('/' as any);
+  };
 
   return (
     <SafeAreaView className="flex-1 bg-[#F2F5F2] justify-center">
@@ -35,7 +42,7 @@ export default function CerrarSesionScreen() {
             className="w-full rounded-2xl py-4 items-center"
             style={{ backgroundColor: '#FFF0F0', borderWidth: 1, borderColor: '#FFCCCC' }}
             activeOpacity={0.8}
-            onPress={() => router.replace('/' as any)}
+            onPress={handleLogout}
           >
             <Text className="text-[#E53E3E] font-semibold text-base">Cerrar sesión</Text>
           </TouchableOpacity>
