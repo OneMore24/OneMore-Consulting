@@ -1,19 +1,22 @@
-# Proyecto: VUELA_PERU (Control Operativo Aéreo)
+# Proyecto VUELA_PERU — Control Operativo Aéreo
 
-**Cliente:** Aerolíneas VuelaPerú
-**Estado Actual:** 🟢 En Desarrollo (Fase de Arquitectura)
+Cliente: Aerolíneas VuelaPerú
+Estado: En desarrollo (fase de arquitectura).
 
-### 📋 Requisitos
-* Verificación del registro de horas de vuelo por aeronave.
-* Bloqueo automático del sistema para mantenimiento si horas > 500.
-* Generación de Hoja de Ruta post-verificación (Checklist OK).
+## Requisitos
 
-### 💻 Tecnologías
-* **Backend:** C++ (Estándares de alto rendimiento)
-* **Base de Datos:** PostgreSQL
-* **Arquitectura:** Orientada a Servicios (SOA)
+- Verificación del registro de horas de vuelo por aeronave.
+- Bloqueo automático del sistema para mantenimiento cuando las horas superen las 500.
+- Generación de la hoja de ruta posterior a la verificación (lista de comprobación aprobada).
 
-### 📅 Cronograma
-* **Inicio del Proyecto:** 01 de Abril, 2026
-* **Hito Actual:** Definición de la Línea Base 1 (Requerimientos).
-* **Fecha de Entrega Estimada:** 20 de Agosto, 2026
+## Tecnologías
+
+- Backend: C++ (estándares de alto rendimiento)
+- Base de datos: PostgreSQL
+- Arquitectura: orientada a servicios (SOA)
+
+## Cronograma
+
+- Inicio del proyecto: 1 de abril de 2026.
+- Hito actual: definición de la Línea Base 1 (requerimientos).
+- Fecha de entrega estimada: 20 de agosto de 2026.

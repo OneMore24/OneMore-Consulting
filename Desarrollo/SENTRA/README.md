@@ -1,19 +1,22 @@
-# Proyecto: SENTRA (Trazabilidad Logística)
+# Proyecto SENTRA — Trazabilidad Logística
 
-**Cliente:** Agroexportadora Verde
-**Estado Actual:** ⚪ Pendiente (Aprobación de Arquitectura)
+Cliente: Agroexportadora Verde
+Estado: Pendiente (aprobación de arquitectura).
 
-### 📋 Requisitos
-* Integración con lectura de sensores de temperatura.
-* Alertas de interrupción de cadena de frío (> 4°C).
-* Trazabilidad GPS de contenedores por lote.
+## Requisitos
 
-### 💻 Tecnologías
-* **Lenguaje:** C++ (Integración con Hardware/IoT)
-* **Base de Datos:** MySQL
-* **Arquitectura:** Basada en Eventos
+- Integración con la lectura de sensores de temperatura.
+- Alertas de interrupción de la cadena de frío (superior a 4 °C).
+- Trazabilidad GPS de contenedores por lote.
 
-### 📅 Cronograma
-* **Inicio del Proyecto:** Septiembre 2026 (Proyectado)
-* **Hito Actual:** Diseño del modelo Entidad-Relación.
-* **Fecha de Entrega Estimada:** Diciembre 2026
+## Tecnologías
+
+- Lenguaje: C++ (integración con hardware e IoT)
+- Base de datos: MySQL
+- Arquitectura: basada en eventos
+
+## Cronograma
+
+- Inicio del proyecto: septiembre de 2026 (proyectado).
+- Hito actual: diseño del modelo entidad-relación.
+- Fecha de entrega estimada: diciembre de 2026.

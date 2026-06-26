@@ -1,4 +1,4 @@
-# ⚖️ Políticas Corporativas — OneMore Consulting
+# Políticas Corporativas — OneMore Consulting
 
 **Versión:** 1.0 · **Responsable:** Jefatura de Proyecto · **Estado:** Aprobado
 

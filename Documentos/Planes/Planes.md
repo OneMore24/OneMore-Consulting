@@ -1,4 +1,4 @@
-# 📅 Planes de Gestión y Ejecución — OneMore Consulting
+# Planes de Gestión y Ejecución — OneMore Consulting
 
 **Versión:** 1.0 · **Estado:** Aprobado
 

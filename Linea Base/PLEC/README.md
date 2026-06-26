@@ -1,11 +1,11 @@
-# Línea Base: Proyecto PLEC (Corporación Talento)
+# Línea Base — Proyecto PLEC (Corporación Talento)
 
-**Estado General:** 🟡 En Desarrollo
+Estado general: En desarrollo.
 
 | Hito | Descripción | Fecha | Estado |
 | :--- | :--- | :--- | :--- |
-| **LB1** | Análisis de Tests Psicométricos y Validaciones | 25/03/2026 | ✅ Completado |
-| **LB2** | Motor de Evaluación y Algoritmo de Ranking | 10/05/2026 | 🚧 En Desarrollo |
-| **LB3** | Despliegue de Portal de Candidatos | 10/06/2026 | ⏳ Falta |
+| LB1 | Análisis de tests psicométricos y validaciones | 25/03/2026 | Completado |
+| LB2 | Motor de evaluación y algoritmo de ranking | 10/05/2026 | En desarrollo |
+| LB3 | Despliegue del portal de candidatos | 10/06/2026 | Por iniciar |
 
-**Progreso:** Actualmente se están calibrando las métricas de evaluación para la aprobación de la LB2.
+Progreso: se calibran las métricas de evaluación para la aprobación de la LB2.

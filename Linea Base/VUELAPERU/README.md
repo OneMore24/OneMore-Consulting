@@ -1,11 +1,11 @@
-# Línea Base: Proyecto VUELA_PERU (Aerolíneas VuelaPerú)
+# Línea Base — Proyecto VUELA_PERU (Aerolíneas VuelaPerú)
 
-**Estado General:** 🟡 En Desarrollo
+Estado general: En desarrollo.
 
 | Hito | Descripción | Fecha | Estado |
 | :--- | :--- | :--- | :--- |
-| **LB1** | Especificación de Requisitos y Normativas Aéreas | 15/04/2026 | ✅ Completado |
-| **LB2** | Módulo de Gestión de Horas de Vuelo y Mantenimiento | 15/06/2026 | 🚧 En Desarrollo |
-| **LB3** | Certificación de Seguridad y Despliegue Final | 20/08/2026 | ⏳ Falta |
+| LB1 | Especificación de requisitos y normativas aéreas | 15/04/2026 | Completado |
+| LB2 | Módulo de gestión de horas de vuelo y mantenimiento | 15/06/2026 | En desarrollo |
+| LB3 | Certificación de seguridad y despliegue final | 20/08/2026 | Por iniciar |
 
-**Progreso:** Tras la aprobación de la LB1 la semana pasada, se ha iniciado el diseño del módulo de seguridad.
+Progreso: tras la aprobación de la LB1, se ha iniciado el diseño del módulo de seguridad.

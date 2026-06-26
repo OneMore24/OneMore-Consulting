@@ -1,19 +1,22 @@
-# Proyecto: SNMP (Sistema de Monitoreo Psicológico)
+# Proyecto SNMP — Sistema de Monitoreo Psicológico
 
-**Cliente:** Mente en Calma
-**Estado Actual:** ⚪ Pendiente (En Cola de Planificación)
+Cliente: Mente en Calma
+Estado: Pendiente (en cola de planificación).
 
-### 📋 Requisitos
-* Interfaz para registro diario de niveles de estrés.
-* Módulo de reproducción de audio guiado (mindfulness).
-* Generador de log de crisis basado en umbrales de frecuencia cardíaca.
+## Requisitos
 
-### 💻 Tecnologías
-* **Lenguaje:** Java
-* **Base de Datos:** SQLite (Almacenamiento local)
-* **Arquitectura:** Standalone 
+- Interfaz para el registro diario de niveles de estrés.
+- Módulo de reproducción de audio guiado (mindfulness).
+- Generación de un registro de crisis basado en umbrales de frecuencia cardíaca.
 
-### 📅 Cronograma
-* **Inicio del Proyecto:** Postergado hasta Q3.
-* **Hito Actual:** Levantamiento de requerimientos.
-* **Fecha de Entrega Estimada:** Por definir (TBD).
+## Tecnologías
+
+- Lenguaje: Java
+- Base de datos: SQLite (almacenamiento local)
+- Arquitectura: Standalone
+
+## Cronograma
+
+- Inicio del proyecto: postergado hasta el tercer trimestre.
+- Hito actual: levantamiento de requerimientos.
+- Fecha de entrega estimada: por definir.

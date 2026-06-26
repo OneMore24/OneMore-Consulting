@@ -1,11 +1,12 @@
-# Perfil del Cliente: Excelentemente
+# Perfil del cliente: Excelentemente
 
-**Sector:** Bienestar Corporativo y Coaching Profesional.
-**Ubicación:** Lima, Perú.
+Sector: Bienestar corporativo y coaching profesional.
+Ubicación: Lima, Perú.
 
-### Descripción
-Excelentemente es una organización líder en la capacitación de habilidades blandas para grandes empresas. Han solicitado el desarrollo del sistema **GIE (Gestión Integral de Bienestar)** para automatizar la medición del impacto de sus programas de coaching en el clima laboral de sus clientes.
+## Descripción
 
-### Enlace al Proyecto
-El núcleo del sistema, lógica de negocio y arquitectura inicial se encuentran en la carpeta de desarrollo.
-👉 [Ir a Desarrollo/GIE](../../Desarrollo/GIE)
+Excelentemente es una organización especializada en la capacitación de habilidades blandas para grandes empresas. Ha solicitado el desarrollo del sistema GIE (Gestión Integral de Bienestar) para automatizar la medición del impacto de sus programas de coaching en el clima laboral de sus clientes.
+
+## Proyecto asociado
+
+El núcleo del sistema, la lógica de negocio y la arquitectura inicial se encuentran en la carpeta de desarrollo: [Desarrollo/GIE](../../Desarrollo/GIE).

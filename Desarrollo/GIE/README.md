@@ -1,19 +1,22 @@
-# Proyecto: GIE (Gestión Integral de Bienestar)
+# Proyecto GIE — Gestión Integral de Bienestar
 
-**Cliente:** Excelentemente
-**Estado Actual:** 🟢 En Desarrollo (Fase de Diseño Lógico)
+Cliente: Excelentemente
+Estado: En desarrollo (fase de diseño lógico).
 
-### 📋 Requisitos
-* Sistema de captura de encuestas anónimas (escala 1-10).
-* Generación de alertas automáticas para consultores si el promedio es menor a 7.
-* Dashboard de reportes mensuales de satisfacción.
+## Requisitos
 
-### 💻 Tecnologías
-* **Backend:** Python
-* **Base de Datos:** PostgreSQL
-* **Arquitectura:** Cliente-Servidor
+- Captura de encuestas anónimas (escala 1 a 10).
+- Generación de alertas automáticas para los consultores cuando el promedio sea inferior a 7.
+- Tablero de reportes mensuales de satisfacción.
 
-### 📅 Cronograma
-* **Inicio del Proyecto:** 15 de Febrero, 2026
-* **Hito Actual:** Diseño de Base de Datos finalizado.
-* **Fecha de Entrega Estimada:** 30 de Mayo, 2026
+## Tecnologías
+
+- Backend: Python
+- Base de datos: PostgreSQL
+- Arquitectura: Cliente-Servidor
+
+## Cronograma
+
+- Inicio del proyecto: 15 de febrero de 2026.
+- Hito actual: diseño de base de datos finalizado.
+- Fecha de entrega estimada: 30 de mayo de 2026.

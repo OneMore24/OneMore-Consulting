@@ -1,14 +1,16 @@
-# Perfil del Cliente: Clínica Anxiety
+# Perfil del cliente: Clínica Anxiety
 
-**Sector:** Salud Mental y Psiquiatría.
-**Ubicación:** Lima, Perú.
+Sector: Salud mental y psiquiatría.
+Ubicación: Lima, Perú.
 
-### 🏢 Sobre el Cliente
-La **Clínica Anxiety** es un centro especializado en el tratamiento de trastornos de ansiedad y estrés agudo. Su enfoque combina terapia cognitivo-conductual con un seguimiento continuo del paciente fuera de las horas de consulta.
+## Sobre el cliente
 
-### 🎯 Necesidad del Negocio
-El cliente requiere una herramienta digital que permita a sus pacientes registrar sus niveles de ansiedad diarios y gestionar episodios de crisis en tiempo real. Además, necesitan que los especialistas de la clínica tengan acceso a estos datos estructurados para optimizar las sesiones de terapia y personalizar los tratamientos.
+La Clínica Anxiety es un centro especializado en el tratamiento de trastornos de ansiedad y estrés agudo. Su enfoque combina la terapia cognitivo-conductual con un seguimiento continuo del paciente fuera de las horas de consulta.
 
-### 🚀 Enlace al Proyecto
-Toda la ingeniería, diseño y código fuente de esta solución se gestiona en la siguiente ruta:
-👉 [Ir a Desarrollo/ACA](../../Desarrollo/ACA)
+## Necesidad del negocio
+
+El cliente requiere una herramienta digital que permita a sus pacientes registrar sus niveles de ansiedad diarios y gestionar los episodios de crisis en tiempo real. Asimismo, sus especialistas necesitan acceder a estos datos de forma estructurada para optimizar las sesiones de terapia y personalizar los tratamientos.
+
+## Proyecto asociado
+
+La ingeniería, el diseño y el código fuente de la solución se gestionan en [Desarrollo/ACA](../../Desarrollo/ACA).

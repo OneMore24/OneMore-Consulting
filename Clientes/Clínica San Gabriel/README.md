@@ -1,10 +1,12 @@
-# Perfil del Cliente: Clínica San Gabriel
+# Perfil del cliente: Clínica San Gabriel
 
-**Sector:** Salud y Medicina Especializada.
-**Ubicación:** San Isidro, Lima.
+Sector: Salud y medicina especializada.
+Ubicación: San Isidro, Lima.
 
-### Descripción
-Una de las clínicas con mayor prestigio en el sector salud. Han confiado en OneMore Consulting para el desarrollo de **VITALIS**, un sistema de gestión hospitalaria que optimice la trazabilidad de las historias clínicas digitales y la asignación de turnos médicos en tiempo real.
+## Descripción
 
-### Enlace al Proyecto
-👉 [Ir a Desarrollo/VITALIS](../../Desarrollo/VITALIS)
+La Clínica San Gabriel es un centro de prestigio en el sector salud. Ha confiado en OneMore Consulting el desarrollo de VITALIS, un sistema de gestión hospitalaria orientado a optimizar la trazabilidad de las historias clínicas digitales y la asignación de turnos médicos en tiempo real.
+
+## Proyecto asociado
+
+[Desarrollo/VITALIS](../../Desarrollo/VITALIS)

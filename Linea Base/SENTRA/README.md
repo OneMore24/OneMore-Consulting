@@ -1,11 +1,11 @@
-# Línea Base: Proyecto SENTRA (Agroexportadora Verde)
+# Línea Base — Proyecto SENTRA (Agroexportadora Verde)
 
-**Estado General:** ⚪ Pendiente
+Estado general: Pendiente.
 
 | Hito | Descripción | Fecha | Estado |
 | :--- | :--- | :--- | :--- |
-| **LB1** | Definición de Protocolos IoT y Sensores | Septiembre 2026 | ⚪ Pendiente |
-| **LB2** | Plataforma de Trazabilidad y GPS | Octubre 2026 | ⚪ Pendiente |
-| **LB3** | Despliegue en Planta y Cadena de Frío | Diciembre 2026 | ⚪ Pendiente |
+| LB1 | Definición de protocolos IoT y sensores | Septiembre 2026 | Pendiente |
+| LB2 | Plataforma de trazabilidad y GPS | Octubre 2026 | Pendiente |
+| LB3 | Despliegue en planta y cadena de frío | Diciembre 2026 | Pendiente |
 
-**Progreso:** Documentación técnica base en etapa de revisión previa a la firma del acta de inicio.
+Progreso: documentación técnica base en revisión previa a la firma del acta de inicio.

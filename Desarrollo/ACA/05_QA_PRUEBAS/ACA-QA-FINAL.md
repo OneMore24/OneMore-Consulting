@@ -1,52 +1,47 @@
 # Reporte Final de Aseguramiento de la Calidad (ACA-QA-FINAL)
 
-**Proyecto:** ACA — App para el Control de la Ansiedad
-**Cliente:** Clínica Anxiety
-**Responsable QA:** David Aldana
-**Fecha:** 10/06/2026
+Proyecto: ACA — Aplicación para el Control de la Ansiedad
+Cliente: Clínica Anxiety
+Responsable de QA: David Aldana
+Fecha: 10/06/2026
 
 ## 1. Objetivo
-Verificar que el producto cumple los Casos de Uso fundamentales (CU01–CU06) y
-que las tres capas (app móvil, API REST y base de datos) están integradas.
 
-## 2. Resumen de resultados por Caso de Uso
+Verificar que el producto cumple los casos de uso fundamentales (CU01–CU06) y que las tres capas (aplicación móvil, API REST y base de datos) se encuentran integradas.
 
-| CU | Descripción | Cobertura | Estado |
-| :-- | :-- | :-- | :--: |
-| CU01 | Registro de paciente | Registro con validación + hash bcrypt + JWT | ✅ |
-| CU02 | Consulta/acceso del paciente | Login, bloqueo por intentos, recuperación de contraseña | ✅ |
-| CU03 | Registro de diario emocional | `POST/GET /api/emotions` + persistencia | ✅ |
-| CU04 | Registro de síntomas físicos | `POST/GET /api/symptoms` + catálogo | ✅ |
-| CU05 | Visualización de seguimiento y gráficas | Historial emocional con filtro por fechas | ✅ |
-| CU06 | Herramientas de apoyo | SOS, recursos/favoritos y recordatorios | ✅ |
+## 2. Resultados por caso de uso
 
-## 3. Pruebas de Integración (app ↔ API ↔ BD)
-- **Autenticación end-to-end:** login/registro desde la app obtienen un JWT real
-  del backend; las pantallas dejaron de navegar con validación simulada.
-- **Seguridad:** rutas protegidas rechazan peticiones sin token (401). Las
-  contraseñas se almacenan hasheadas (`password_hash`), nunca en texto plano.
-- **Recuperación de contraseña:** flujo enlazado desde el login
-  (forgot → verify → reset) usando `token_recuperacion` con expiración.
-- **Persistencia:** el diario emocional se guarda y se rehidrata desde la BD al
-  iniciar sesión; los recordatorios creados se persisten por paciente.
+| CU | Descripción | Cobertura | Resultado |
+| :-- | :-- | :-- | :-- |
+| CU01 | Registro de paciente | Registro con validación, hash bcrypt y JWT | Conforme |
+| CU02 | Acceso del paciente | Inicio de sesión, bloqueo por intentos y recuperación de contraseña | Conforme |
+| CU03 | Registro de diario emocional | `POST/GET /api/emotions` con persistencia | Conforme |
+| CU04 | Registro de síntomas físicos | `POST/GET /api/symptoms` y catálogo | Conforme |
+| CU05 | Visualización de seguimiento y gráficas | Historial emocional con filtro por fechas | Conforme |
+| CU06 | Herramientas de apoyo | SOS, recursos con favoritos y recordatorios | Conforme |
+
+## 3. Pruebas de integración (aplicación, API y base de datos)
+
+- Autenticación de extremo a extremo: el inicio de sesión y el registro desde la aplicación obtienen un JWT real del backend.
+- Seguridad: las rutas protegidas rechazan las peticiones sin token (401). Las contraseñas se almacenan con hash (`password_hash`), nunca en texto plano.
+- Recuperación de contraseña: flujo enlazado desde el inicio de sesión, con `token_recuperacion` y expiración.
+- Persistencia: el diario emocional se guarda y se recupera desde la base de datos al iniciar sesión; los recordatorios creados se conservan por paciente.
 
 ## 4. Pruebas no funcionales
-| Aspecto | Verificación | Estado |
-| :-- | :-- | :--: |
-| Integridad referencial | FKs con `ON DELETE CASCADE` (ver `ACA-DB.sql`) | ✅ |
-| Manejo de errores | Middleware global, respuestas JSON uniformes | ✅ |
-| Resiliencia de red | La app conserva datos locales si la API no responde | ✅ |
-| Configuración | Variables sensibles en `.env` (fuera de Git) | ✅ |
 
-## 5. Riesgos / Pendientes
-- **Sesión no persistente entre reinicios:** el JWT se mantiene en memoria.
-  Recomendación: almacenar el token con `expo-secure-store`.
-- **Sin servicio de correo:** el token de recuperación se entrega en la
-  respuesta para fines de demostración; en producción debe enviarse por email.
-- **Pruebas end-to-end con BD:** requieren una instancia MySQL activa con el
-  esquema `ACA-DB.sql` cargado.
+| Aspecto | Verificación | Resultado |
+| :-- | :-- | :-- |
+| Integridad referencial | Claves foráneas con `ON DELETE CASCADE` (`ACA-DB.sql`) | Conforme |
+| Manejo de errores | Middleware global con respuestas JSON uniformes | Conforme |
+| Resiliencia de red | La aplicación conserva datos locales si la API no responde | Conforme |
+| Configuración | Variables sensibles en `.env`, fuera del control de versiones | Conforme |
+
+## 5. Observaciones y trabajo futuro
+
+- Persistencia de la sesión entre reinicios: el JWT se mantiene en memoria. Se recomienda almacenarlo con `expo-secure-store`.
+- Servicio de correo: el token de recuperación se entrega en la respuesta con fines de demostración; en producción debe enviarse por correo electrónico.
+- Pruebas de extremo a extremo con base de datos: requieren una instancia MySQL activa con el esquema `ACA-DB.sql` cargado.
 
 ## 6. Conclusión
-El producto satisface los criterios de aceptación de los Casos de Uso CU01–CU06
-y queda **integrado en sus tres capas**. Se considera apto para la entrega final
-(`ACA-FIN.apk`), con los pendientes de la sección 5 como mejoras posteriores.
+
+El producto satisface los criterios de aceptación de los casos de uso CU01–CU06 y se encuentra integrado en sus tres capas. Se considera apto para la entrega final (`ACA-FIN.apk`), con las observaciones de la sección 5 como mejoras posteriores.

@@ -1,10 +1,12 @@
-# Perfil del Cliente: Mente en Calma
+# Perfil del cliente: Mente en Calma
 
-**Sector:** Salud Mental y Mindfulness.
-**Ubicación:** Regional (Remoto).
+Sector: Salud mental y mindfulness.
+Ubicación: Regional (remoto).
 
-### Descripción
-Esta ONG se dedica a democratizar el acceso a técnicas de meditación y reducción de estrés. El proyecto **SNMP (Sistema de Monitoreo Psicológico)** busca registrar la evolución diaria de los usuarios para identificar patrones de ansiedad y ofrecer contenido preventivo de manera oportuna.
+## Descripción
 
-### Enlace al Proyecto
-👉 [Ir a Desarrollo/SNMP](../../Desarrollo/SNMP)
+Organización dedicada a democratizar el acceso a técnicas de meditación y reducción del estrés. El proyecto SNMP (Sistema de Monitoreo Psicológico) busca registrar la evolución diaria de los usuarios para identificar patrones de ansiedad y ofrecer contenido preventivo de manera oportuna.
+
+## Proyecto asociado
+
+[Desarrollo/SNMP](../../Desarrollo/SNMP)

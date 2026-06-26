@@ -1,10 +1,12 @@
-# Perfil del Cliente: Agroexportadora Verde
+# Perfil del cliente: Agroexportadora Verde
 
-**Sector:** Agroindustria / Exportación.
-**Ubicación:** Ica, Perú.
+Sector: Agroindustria y exportación.
+Ubicación: Ica, Perú.
 
-### Descripción
-Empresa dedicada a la exportación de arándanos y uvas hacia mercados europeos. El sistema **SENTRA** es una solución de trazabilidad que permite monitorear cada lote desde la cosecha hasta el puerto de destino, garantizando el cumplimiento de estándares internacionales de calidad.
+## Descripción
 
-### Enlace al Proyecto
-👉 [Ir a Desarrollo/SENTRA](../../Desarrollo/SENTRA)
+Empresa dedicada a la exportación de arándanos y uvas hacia mercados europeos. El sistema SENTRA es una solución de trazabilidad que permite monitorear cada lote desde la cosecha hasta el puerto de destino, garantizando el cumplimiento de los estándares internacionales de calidad.
+
+## Proyecto asociado
+
+[Desarrollo/SENTRA](../../Desarrollo/SENTRA)

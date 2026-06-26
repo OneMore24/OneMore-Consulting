@@ -1,4 +1,4 @@
-# 🛠️ Directrices Técnicas — OneMore Consulting
+# Directrices Técnicas — OneMore Consulting
 
 **Versión:** 1.0 · **Estado:** En revisión
 

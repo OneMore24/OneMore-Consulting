@@ -1,11 +1,11 @@
-# Línea Base: Proyecto SADE (Grupo Andino Comercial)
+# Línea Base — Proyecto SADE (Grupo Andino Comercial)
 
-**Estado General:** ⚪ Pendiente
+Estado general: Pendiente.
 
 | Hito | Descripción | Fecha | Estado |
 | :--- | :--- | :--- | :--- |
-| **LB1** | Levantamiento de Inventarios y Almacenes | Noviembre 2026 | ⚪ Pendiente |
-| **LB2** | Integración con Sistemas ERP Existentes | Diciembre 2026 | ⚪ Pendiente |
-| **LB3** | Roll-out Regional y Soporte Post-Go-Live | Febrero 2027 | ⚪ Pendiente |
+| LB1 | Levantamiento de inventarios y almacenes | Noviembre 2026 | Pendiente |
+| LB2 | Integración con los sistemas ERP existentes | Diciembre 2026 | Pendiente |
+| LB3 | Despliegue regional y soporte posterior a la puesta en marcha | Febrero 2027 | Pendiente |
 
-**Progreso:** Proyecto en cola de desarrollo estratégico para el cuarto trimestre del año.
+Progreso: proyecto en cola de desarrollo estratégico para el cuarto trimestre del año.
